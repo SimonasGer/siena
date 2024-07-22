@@ -21,12 +21,12 @@ const Profile = () => {
 
     useEffect(() => {
         if(location !== "/profile"){
-            profileLink = location;
+            profileLink = location.slice(1);
             setPm(true)
         }
         if (loading){
         try {
-            axios.get(`https://sienabackend.vercel.app/users/${profileLink.slice(1) || getUser().id}`, {
+            axios.get(`https://sienabackend.vercel.app/users/${profileLink || getUser().id}`, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem("token")}`
                   }

@@ -3,6 +3,7 @@ import {getUser} from "../../utilities/getUser";
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import "./nav.scss";
 
 const ProfileButton = () => {
     const [user, setUser] = useState("")
@@ -29,7 +30,7 @@ const ProfileButton = () => {
           }
     }, [])
     return (
-        getUser() && (profile !== "/profile") && <button onClick={HandleProfile}>{user.username}</button>
+        getUser() && (profile !== "/profile") && <button className='navLink' onClick={HandleProfile}>{user.username}</button>
     );
 };
 

@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import {getUser} from "../../utilities/getUser";
+import "./nav.scss";
 
 const RegisterButton = () => {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ const RegisterButton = () => {
   };
 
   return (
-    !getUser() && <button onClick={HandleClick}>Registruotis</button>
+    !getUser() && <button className='navLink' onClick={HandleClick}>Registruotis</button>
   );
 };
 

@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import {getUser} from "../../utilities/getUser";
 import { useLocation } from 'react-router-dom';
+import "./nav.scss";
 
 const UsersButton = () => {
     let profile = useLocation().pathname;
@@ -10,7 +11,7 @@ const UsersButton = () => {
     };
 
     return (
-        getUser() && (profile !== "/users") && <button onClick={HandleProfile}>Vartotojai</button>
+        getUser() && (profile !== "/users") && <button className='navLink' onClick={HandleProfile}>Vartotojai</button>
     );
 };
 

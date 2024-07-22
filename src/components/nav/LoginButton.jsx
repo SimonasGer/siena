@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import {getUser} from "../../utilities/getUser";
+import "./nav.scss";
 
 const LoginButton = () => {
   const navigate = useNavigate();
@@ -8,7 +9,7 @@ const LoginButton = () => {
   };
 
   return (
-    !getUser() && <button onClick={HandleClick}>Prisijungti</button>
+    !getUser() && <button className='navLink' onClick={HandleClick}>Prisijungti</button>
   );
 };
 

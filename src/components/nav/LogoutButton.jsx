@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import {getUser} from "../../utilities/getUser";
+import "./nav.scss";
 
 const LogoutButton = () => {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ const LogoutButton = () => {
   };
 
   return (
-    getUser() && <button onClick={HandleLogout}>Atsijungti</button>
+    getUser() && <button className='navLink' onClick={HandleLogout}>Atsijungti</button>
   );
 };
 
