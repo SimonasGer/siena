@@ -11,11 +11,11 @@ const Header = () => {
         <header className="header">
             <Link className="header__title" to={"/"}>siena</Link>
             <nav className="header__nav">
-                <LoginButton className="header_navLink"/>
-                <RegisterButton className="header_navLink"/>
-                <LogoutButton className="header_navLink"/>
-                <ProfileButton className="header_navLink"/>
-                <UsersButton className="header_navLink"/>
+                <LoginButton className="header__navLink"/>
+                <RegisterButton className="header__navLink"/>
+                <LogoutButton className="header__navLink"/>
+                <ProfileButton className="header__navLink"/>
+                <UsersButton className="header__navLink"/>
             </nav>
         </header>
     )
