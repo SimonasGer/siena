@@ -1,0 +1,28 @@
+body{
+    margin-top: 100px;
+}
+.header{
+    background-color: gray;
+    position: fixed;
+    width: 100vw;
+    max-width: 100%;
+    left: 0;
+    top: 0;    
+    display: flex;
+    justify-content: space-between;
+    &__title{
+        font-size: 36pt;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        margin: 10px;
+    }
+    &__nav{
+        display: flex;
+        margin: 20px;
+        gap: 10px;
+    }
+    &__navLink{
+        color: white;
+    }
+}

@@ -27,7 +27,7 @@ const Profile = () => {
 
         if (loading){
         try {
-            axios.get(`https://sienabackend.vercel.app/${profileLink || getUser().id}`, {
+            axios.get(`https://sienabackend.vercel.app/users/${profileLink || getUser().id}`, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem("token")}`
                   }
