@@ -1,0 +1,16 @@
+.post{
+    display: flex;
+    flex-direction: column;
+    &__user{
+        font-size: 18pt;
+        align-self: center;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    &__content{
+        margin: 20px;
+        color: white;
+        font-size: 16pt;
+    }
+}

@@ -50,16 +50,16 @@ const Pm = () => {
     return(
         <main>
             <div>
-                <button onClick={HandleDown}>zemyn</button>
+                <button className="down" onClick={HandleDown}>↓</button>
             </div>
             <div>
                 <Posts id ={`pm?id1=${post.from}&id2=${post.to}`}/>
             </div>
-            <form onSubmit={PostHandler}>
-                <fieldset>
-                    <label htmlFor="pm">Zinute</label>
-                    <textarea onChange={HandleChange} name="pm" value={post.pm}></textarea>
-                    <button type="submit">Siusti</button>
+            <form className="form" onSubmit={PostHandler}>
+                <fieldset className="form__fieldset">
+                    <label className="form__label" htmlFor="pm">Zinute</label>
+                    <textarea className="form__input" onChange={HandleChange} name="pm" value={post.pm}></textarea>
+                    <button className="form__submit" type="submit">Siusti</button>
                 </fieldset>
             </form>
         </main>

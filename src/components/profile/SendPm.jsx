@@ -7,7 +7,7 @@ const SendPm = (props) => {
   };
 
   return (
-    <button onClick={HandleClick}>Siusti PM</button>
+    <button className='otherLink' onClick={HandleClick}>Siusti PM</button>
   );
 };
 

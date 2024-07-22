@@ -8,7 +8,7 @@ const UserLink = (props) => {
         link = props.id
     }
     return(
-        <button><Link to={`/${link}`}>{props.username}</Link></button>
+        <Link className="otherLink" to={`/${link}`}>{props.username}</Link>
     )
 }
 export default UserLink

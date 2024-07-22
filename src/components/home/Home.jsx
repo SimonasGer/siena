@@ -3,6 +3,7 @@ import { getUser} from "../../utilities/getUser";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Posts from '../posts/Posts';
+import "./home.scss"
 
 const Home = () => {
     const navigate = useNavigate();
@@ -47,21 +48,21 @@ const Home = () => {
         }
     }
     return(
-        <main>
+        <main className='wall'>
             <div>
-                <button onClick={HandleDown}>zemyn</button>
+                <button className='down' onClick={HandleDown}>↓</button>
             </div>
-            <div>
+            <div className='wall__title'>
                 <p>Home</p>
             </div>
-            <div>
+            <div className='wall__posts'>
                 <Posts id ={"posts"}/>
             </div>
-            <form onSubmit={PostHandler}>
-                <fieldset>
-                    <label htmlFor="post">Zinute</label>
-                    <textarea onChange={HandleChange} type="text" name="post" value={post.post} required></textarea>
-                    <button type="submit">Siusti</button>
+            <form className='form' onSubmit={PostHandler}>
+                <fieldset className='form__fieldset'>
+                    <label className='form__label' htmlFor="post">Zinute</label>
+                    <textarea className='form__input' onChange={HandleChange} type="text" name="post" value={post.post} required></textarea>
+                    <button className='form__submit' type="submit">Siusti</button>
                 </fieldset>
             </form>
         </main>

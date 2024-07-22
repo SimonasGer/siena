@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { getUser } from '../../utilities/getUser';
+import "./post.scss"
+
 const Post = (props) => {
     let link = ""
     if (props.id === getUser().id){
@@ -9,9 +11,9 @@ const Post = (props) => {
     }
 
     return(
-        <article>
-            <h2><Link to={`/${link}`}>{props.username}</Link></h2>
-            <p>{props.post}</p>
+        <article className='post'>
+            <Link className='post__user' to={`/${link}`}>{props.username}</Link>
+            <p className='post__content'>{props.post}</p>
         </article>
     )
 }

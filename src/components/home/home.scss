@@ -1,0 +1,16 @@
+.down{
+    background-color: white;
+    border: none;
+    font-size: 36pt;
+    width: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+.wall{
+    display: flex;
+    flex-direction: column;
+    &__title{
+        align-self: center;
+    }
+}

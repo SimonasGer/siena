@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import "../login/form.scss"
 
 const Register = () => {
     const navigate = useNavigate();
@@ -31,16 +32,16 @@ const Register = () => {
           }
     }
     return(
-        <form onSubmit={HandleSubmit}>
-            <fieldset>
-                <label htmlFor="username">Pseudonimas</label>
-                <input onChange={HandleChange} value={user.username} required type="text" name="username"/>
-                <label htmlFor="password">Slaptazodis</label>
-                <input onChange={HandleChange} value={user.password} required minLength={"6"} type="password" name="password"/>
-                <label htmlFor="password_confirm">Pakartokite slaptazodi</label>
-                <input onChange={HandleChange} value={user.password_confirm} required minLength={"6"} type="password" name="password_confirm"/>
-                <p>{error}</p>
-                <button type="submit">Registruotis</button>
+        <form className="form" onSubmit={HandleSubmit}>
+            <fieldset className="form__fieldset">
+                <label className="form__label" htmlFor="username">Pseudonimas</label>
+                <input className="form__input" onChange={HandleChange} value={user.username} required type="text" name="username"/>
+                <label className="form__label" htmlFor="password">Slaptazodis</label>
+                <input className="form__input" onChange={HandleChange} value={user.password} required minLength={"6"} type="password" name="password"/>
+                <label className="form__label" htmlFor="password_confirm">Pakartokite slaptazodi</label>
+                <input className="form__input" onChange={HandleChange} value={user.password_confirm} required minLength={"6"} type="password" name="password_confirm"/>
+                <p className="form__error">{error}</p>
+                <button className="form__submit" type="submit">Registruotis</button>
             </fieldset>
         </form>
     )

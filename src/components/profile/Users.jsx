@@ -26,7 +26,7 @@ const Users = () => {
       }
     }, [])
     return(
-        <section>
+        <section className='wall'>
             <h2>Vartotojai</h2>
             {users.map(user => (
                     <UserLink username={user.username} id={user._id}/>

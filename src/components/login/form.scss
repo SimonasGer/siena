@@ -1,0 +1,30 @@
+body{background-color: black;}
+.form{
+    &__fieldset{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        border: none;
+        background-color: gray;
+        border-radius: 10px;
+    }
+    &__label{
+        font-weight: bold;
+    }
+    &__input{
+        width: 200px;
+        height: 25px;
+        border-radius: 10px;
+        border-width: 1px;
+    }
+    &__submit{
+        background-color: black;
+        color: white;
+        width: 200px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+}

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useLocation, useNavigate } from "react-router-dom";
 import SendPm from "./SendPm";
+import "./profile.scss";
 
 const Profile = () => {
     const [user, setUser] = useState({})
@@ -44,10 +45,10 @@ const Profile = () => {
     }, [])
 
     return(
-        <div>
-            <h2>Profile</h2>
-            <p>Pseudonimas: {user.username}</p>
-            {pm && <SendPm id={location}/>}
+        <div className="profile">
+            <h2 className="profile__title">Profilis</h2>
+            <p className="profile__name">Pseudonimas: {user.username}</p>
+            {pm && <SendPm className="profile__pm" id={location}/>}
         </div>
     )
 }

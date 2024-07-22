@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import "./form.scss";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -32,14 +33,14 @@ const Login = () => {
     }
 
     return(
-        <form onSubmit={HandleSubmit}>
-            <fieldset>
-                <label htmlFor="username">Pseudonimas</label>
-                <input onChange={HandleChange} value={user.username} required type="text" name="username"/>
-                <label htmlFor="password">Slaptazodis</label>
-                <input onChange={HandleChange} value={user.password} required type="password" name="password"/>
-                <p>{error}</p>
-                <button type="submit">Prisijungti</button>
+        <form className="form" onSubmit={HandleSubmit}>
+            <fieldset className="form__fieldset">
+                <label className="form__label" htmlFor="username">Pseudonimas</label>
+                <input className="form__input" onChange={HandleChange} value={user.username} required type="text" name="username"/>
+                <label className="form__label" htmlFor="password">Slaptazodis</label>
+                <input className="form__input" onChange={HandleChange} value={user.password} required type="password" name="password"/>
+                <p className="form__error">{error}</p>
+                <button className="form__submit" type="submit">Prisijungti</button>
             </fieldset>
         </form>
     )
